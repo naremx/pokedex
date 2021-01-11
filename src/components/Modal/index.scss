@@ -1,0 +1,177 @@
+$cardBoxShadow: #d5d6dc;
+$cardBoxShadowHover: #aeaeae;
+$cardBackground: #f3f4f6;
+$colorAddButton: #dc7777;
+$levelTubeBackground: #e4e4e4;
+$levelTubeBoxShadow: #d4d4d4;
+$levelTubeValueBackground: #f3701a;
+$bottomBarBackground: #ec5656;
+$bottomBarBoxshadow: #d9333387;
+$bottomBarTextColor: #ffffff;
+$modalOutside: #000000a3;
+$modalContentBoxShadow: #474444;
+$modalContentBackground: #ffffff;
+$searchBoxBorder: #e6e6e6;
+
+.modal {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 90%;
+  height: 80%;
+  transform: translate(-50%, -50%);
+  background: $bottomBarBoxshadow;
+  border-radius: 5px;
+}
+
+.box-modal {
+  width: 95%;
+  height: 260px;
+  background-color: $levelTubeBackground;
+  margin: 20px;
+  box-sizing: border-box;
+}
+
+.box-modal:hover {
+  box-shadow: 0 3px 6px $levelTubeBoxShadow, 0 3px 6px $levelTubeBoxShadow;
+}
+
+.box-scale-modal {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  height: 100%;
+}
+
+.card-scale-modal {
+  align-items: flex-start;
+  display: flex;
+  justify-content: flex-start;
+  margin: 10px;
+}
+
+.text-card {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: -100px;
+}
+
+.text-modal-name {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: -100px;
+  font-family: Gaegu;
+  font-size: 25px;
+}
+
+.box-modal .text-add {
+  visibility: hidden;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10px;
+  margin-top: -1px;
+  color: $colorAddButton;
+  cursor: pointer;
+}
+
+.box-modal:hover .text-add {
+  visibility: visible;
+}
+
+p {
+  font-size: 18px;
+}
+
+.img-modal {
+  max-width: 65%;
+  height: auto;
+}
+
+.container-card {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-flow: wrap;
+  justify-content: flex-start;
+}
+
+.nav-modal {
+  height: 600px;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.container-search {
+  margin: 15px auto;
+  width: 100%;
+  max-width: 900px;
+}
+
+.search-label {
+  position: relative;
+}
+
+.container-search input {
+  width: 100%;
+  padding: 10px;
+  font-size: 24px;
+  font-family: Gaegu;
+  color: #444;
+  box-sizing: border-box;
+}
+
+.search-icon {
+  position: absolute;
+  top: -10px;
+  font-size: 24px;
+  color: #555;
+  right: 18px;
+}
+
+.search-box {
+  border: 1px solid $searchBoxBorder;
+}
+
+.search-input {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: -10px;
+  right: 8px;
+}
+
+.modal-cover {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba($modalOutside, 0.6);
+  z-index: 1040;
+  display: none;
+}
+
+.modal-cover.modal-cover-active {
+  display: block;
+}
+
+.modal-container {
+  z-index: 1050;
+  position: fixed;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  background: white;
+  width: 65%;
+  min-height: 85%;
+  left: 37%;
+  top: 12%;
+  margin-left: -300px;
+  display: none;
+}
+
+.modal-container.modal-container-active {
+  display: block;
+}
